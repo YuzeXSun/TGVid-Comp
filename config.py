@@ -5,15 +5,15 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")  # ⚠️ Required
-    API_HASH  = os.environ.get("API_HASH", "") # ⚠️ Required
+    API_ID    = os.environ.get("API_ID", "22884130")  # ⚠️ Required
+    API_HASH  = os.environ.get("API_HASH", "a69e8b16dac958f1bd31eee360ec53fa") # ⚠️ Required
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "7751227669:AAFIZXQVQS6LuPc39VytUuVFe05a4G3afcg") # ⚠️ Required
-    FORCE_SUB = os.environ.get('FORCE_SUB', '') # ⚠️ Required
+    FORCE_SUB = os.environ.get('FORCE_SUB', 'Bongo_OpenSource') # ⚠️ Required
     AUTH_CHANNEL = int(FORCE_SUB) if FORCE_SUB and id_pattern.search(
     FORCE_SUB) else None
    
     # database config
-    DB_URL  = os.environ.get("DB_URL", "")  # ⚠️ Required
+    DB_URL  = os.environ.get("DB_URL", "mongodb+srv://Kurana:kurama@cluster0.dxbzy.mongodb.net/")  # ⚠️ Required
     DB_NAME  = os.environ.get("DB_NAME","SnowEncoderBot") 
 
     # Other Configs 
